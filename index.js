@@ -1,7 +1,7 @@
 //// camel case method
 // String.prototype.camelCase=function(ARGUMENT){
 //     let str = this;
-//     return str.split(" ").map(el => 
+//     return str.split(" ").map(el =>
 //         el != '' && el != ' ' ? el.replace(el[0], el[0].toUpperCase()): ''
 //         ).join('');
 // }
@@ -61,7 +61,7 @@
 //    }
 //     return Math.abs(first.reduce((a,b) => a + b) - second.reduce((a,b) => a + b))
 // }
-   
+
 // let arr = [
 //     [1,2,3,],
 //     [4,5,6],
@@ -93,3 +93,86 @@
 // }
 // let arr = [-4, 3, -9, 0, 4, 1]
 // console.log(plusMinus(arr));
+
+
+
+
+
+
+///// TIME CONVERSION
+// const time = '12:01:00AM';
+// const time = '07:05:45PM';
+// const time = '06:40:03AM';
+// const time = '12:40:22AM';
+// const time = '12:45:54PM';
+// function timeConversion(s) {
+//     let result;
+//     let am = s.split(':')
+//     am = am[am.length - 1].split('')[2] == 'A' ? true : false;
+
+//     let hours = s.split(':')[0]
+//     let minutes = s.split(':')[1]
+//     let seconds = s.split(':')[2].split('')[0] + s.split(':')[2].split('')[1]
+
+//     if(am){
+//         hours = hours % 12;
+//         if(hours == 0) hours = hours + '0';
+//         if(hours >= 1 && hours < 10) hours = '0' + hours;
+//     } else {
+//         console.log(hours)
+//         if(hours == 12 ){
+//             hours = '12'
+//         } else {
+//             hours = Number(hours) + 12;
+//         }
+//     }
+//     return hours + ':' + minutes + ':' + seconds;
+
+// }
+
+// console.log(timeConversion(time));
+
+
+
+
+
+//https://www.codewars.com/kata/583d10c03f02f41462000137
+function maxSum(arr,range){
+    //coding and coding..
+    return Math.max(...range.map(range => arr.slice(range[0], range[1] + 1)).map(array => array.reduce((a,b) => a + b)));
+  }
+
+
+//   https://www.codewars.com/kata/5a4d303f880385399b000001/train/javascript
+// Strong number is the number that the sum of the factorial of its digits is equal to number itself.
+// For example, 145 is strong, since 1! + 4! + 5! = 1 + 24 + 120 = 145.
+// function strong(n) {
+//     return n == n.toString().split('').map(el => factorial(el)).reduce((a,b) => a + b) ? "STRONG!!!!" : "Not Strong !!";
+//   }
+
+//   function factorial(n){
+//     if(n < 2) return 1;
+//     return n * factorial(n - 1);
+//   }
+
+
+//https://www.codewars.com/kata/53697be005f803751e0015aa/
+//   function encode(string) {
+//     return string.split('').map( char => enumm.hasOwnProperty(char) ? enumm[char].toString() : char).join('');
+//   }
+
+//   function decode(string) {
+//     return string.split('')
+//             .map( char => Object.values(enumm).includes(+char)
+//                     ? Object.keys(enumm).find(key => enumm[key] === +char) : char
+//                 )
+//             .join('')
+//   }
+
+//   const enumm = {
+//     a: 1,
+//     e: 2,
+//     i: 3,
+//     o: 4,
+//     u: 5,
+//   }
