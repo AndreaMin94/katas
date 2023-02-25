@@ -1,0 +1,22 @@
+{
+  "name": "splitstrings",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test" : "jest --watchAll --verbose",
+    "testc" : "jest --watchAll --verbose --coverage"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^29.4.3"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.4.0",
+    "babel-jest": "*27.1.1",
+    "babel-core": "*6.26.3",
+    "babel-preset-env": "^1.7.0"
+  }
+}
